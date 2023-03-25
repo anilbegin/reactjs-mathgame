@@ -1,12 +1,28 @@
-import React from "react"
+import React, { useState } from "react"
 import ReactDOM from "react-dom/client"
 
 function Main() {
+  const [currentProblem, setCurrentProblem] = useState(generateProblem())
+
+  function generateNumber(max) {
+    return Math.floor(Math.random() * (max + 1))
+  }
+
+  function generateProblem() {
+    return {
+      numberOne: generateNumber(10),
+      numberTwo: generateNumber(10),
+      operator: ["+", "-", "x"][generateNumber(2)]
+    }
+  }
+
   return (
     <>
       <div className="main-ui">
         <div className="main-section">
-          <p className="problem"></p>
+          <p className="problem">
+            {currentProblem.numberOne} {currentProblem.operator} {currentProblem.numberTwo}
+          </p>
           <form action="" className="our-form">
             <input type="text" className="our-field" autoComplete="off" autoFocus />
             <button>Submit</button>
