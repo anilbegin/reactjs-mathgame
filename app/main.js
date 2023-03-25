@@ -2,13 +2,13 @@ import React, { useState, useRef, useEffect } from "react"
 import ReactDOM from "react-dom/client"
 
 function Main() {
-  const [score, setScore] = useState(0)
-  const [mistakes, setMistakes] = useState(0)
-  const [currentProblem, setCurrentProblem] = useState(generateProblem())
-  const [userAnswer, setUserAnswer] = useState("")
-  const [showError, setShowError] = useState(false)
-  const resetButton = useRef(null)
-  const inputField = useRef(null)
+  const [score, setScore] = useState(0) //  score points in state, also passed as 'prop' to ProgressBar component
+  const [mistakes, setMistakes] = useState(0) //  mistake points in state
+  const [currentProblem, setCurrentProblem] = useState(generateProblem()) // the currently generated new Problem in state
+  const [userAnswer, setUserAnswer] = useState("") // user answer in state
+  const [showError, setShowError] = useState(false) // used for applying animation on current problem on submitting wrong answer
+  const resetButton = useRef(null) // used for bringing focus on 'Start Over' button when game ends.
+  const inputField = useRef(null) // used for bringing focus on input Field after every click on Form submit
 
   // Bring focus on to the "Start Over" button when the game session(Win/Lose) ends
   useEffect(() => {
@@ -17,6 +17,7 @@ function Main() {
     }
   }, [score, mistakes])
 
+  // generates a random whole number from 0 - 10 or 0 - 2 (based on generateProblem Object property)
   function generateNumber(max) {
     return Math.floor(Math.random() * (max + 1))
   }
@@ -29,16 +30,19 @@ function Main() {
     }
   }
 
+  // when user submits the form
   function handleSubmit(e) {
     e.preventDefault()
 
     inputField.current.focus() // get the focus back to the input-Field after user clicks on the submit button
 
     let correctAnswer
+    // Calculate the correct answer for the current problem
     if (currentProblem.operator == "+") correctAnswer = currentProblem.numberOne + currentProblem.numberTwo
     if (currentProblem.operator == "-") correctAnswer = currentProblem.numberOne - currentProblem.numberTwo
     if (currentProblem.operator == "x") correctAnswer = currentProblem.numberOne * currentProblem.numberTwo
 
+    // Conditions for Correct Answer/Wrong Answer
     if (correctAnswer == parseInt(userAnswer, 10)) {
       setCurrentProblem(generateProblem())
       setUserAnswer("")
@@ -53,6 +57,7 @@ function Main() {
     }
   }
 
+  // triggered when 'Start Over' button is clicked
   function resetGame() {
     setUserAnswer("")
     setScore(0)
@@ -90,6 +95,7 @@ function Main() {
   )
 }
 
+// Progress Bar component section
 function ProgressBar(props) {
   return (
     <div className="progress">
