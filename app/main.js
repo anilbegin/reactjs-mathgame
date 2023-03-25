@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client"
 
 function Main() {
   const [currentProblem, setCurrentProblem] = useState(generateProblem())
+  const [userAnswer, setUserAnswer] = useState("")
 
   function generateNumber(max) {
     return Math.floor(Math.random() * (max + 1))
@@ -16,6 +17,22 @@ function Main() {
     }
   }
 
+  function handleSubmit(e) {
+    e.preventDefault()
+
+    let correctAnswer
+    if (currentProblem.operator == "+") correctAnswer = currentProblem.numberOne + currentProblem.numberTwo
+    if (currentProblem.operator == "-") correctAnswer = currentProblem.numberOne - currentProblem.numberTwo
+    if (currentProblem.operator == "x") correctAnswer = currentProblem.numberOne * currentProblem.numberTwo
+
+    if (correctAnswer == parseInt(userAnswer, 10)) {
+      alert("Congrats you won!!")
+      setCurrentProblem(generateProblem())
+    } else {
+      alert("Sorry, You lost.")
+    }
+  }
+
   return (
     <>
       <div className="main-ui">
@@ -23,8 +40,8 @@ function Main() {
           <p className="problem">
             {currentProblem.numberOne} {currentProblem.operator} {currentProblem.numberTwo}
           </p>
-          <form action="" className="our-form">
-            <input type="text" className="our-field" autoComplete="off" autoFocus />
+          <form onSubmit={handleSubmit} action="" className="our-form">
+            <input onChange={e => setUserAnswer(e.target.value)} type="text" className="our-field" autoComplete="off" autoFocus />
             <button>Submit</button>
           </form>
           <p>
