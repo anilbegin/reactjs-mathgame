@@ -2,6 +2,8 @@ import React, { useState } from "react"
 import ReactDOM from "react-dom/client"
 
 function Main() {
+  const [score, setScore] = useState(0)
+  const [mistakes, setMistakes] = useState(0)
   const [currentProblem, setCurrentProblem] = useState(generateProblem())
   const [userAnswer, setUserAnswer] = useState("")
 
@@ -26,10 +28,11 @@ function Main() {
     if (currentProblem.operator == "x") correctAnswer = currentProblem.numberOne * currentProblem.numberTwo
 
     if (correctAnswer == parseInt(userAnswer, 10)) {
-      alert("Congrats you won!!")
       setCurrentProblem(generateProblem())
+      setUserAnswer("")
+      setScore(prev => prev + 1)
     } else {
-      alert("Sorry, You lost.")
+      setMistakes(prev => prev + 1)
     }
   }
 
@@ -41,11 +44,11 @@ function Main() {
             {currentProblem.numberOne} {currentProblem.operator} {currentProblem.numberTwo}
           </p>
           <form onSubmit={handleSubmit} action="" className="our-form">
-            <input onChange={e => setUserAnswer(e.target.value)} type="text" className="our-field" autoComplete="off" autoFocus />
+            <input value={userAnswer} onChange={e => setUserAnswer(e.target.value)} type="text" className="our-field" autoComplete="off" autoFocus />
             <button>Submit</button>
           </form>
           <p>
-            You need <span className="points-needed">10</span> more points and are allowed to make <span className="mistakes-allowed">2</span> more mistakes
+            You need {10 - score} more points and are allowed to make {2 - mistakes} more mistakes
           </p>
         </div>
         <ProgressBar />
