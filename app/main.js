@@ -38,7 +38,7 @@ function Main() {
 
   return (
     <>
-      <div className="main-ui">
+      <div className={"main-ui" + (score == 10 || mistakes == 3 ? " overlay-for-blur" : "")}>
         <div className="main-section">
           <p className="problem">
             {currentProblem.numberOne} {currentProblem.operator} {currentProblem.numberTwo}
@@ -53,9 +53,9 @@ function Main() {
         </div>
         <ProgressBar />
       </div>
-      <div className="overlay">
+      <div className={"overlay" + (score == 10 || mistakes == 3 ? " overlay--visible" : "")}>
         <div className="overlay-inner">
-          <p className="end-message"></p>
+          <p className="end-message">{score == 10 ? "Congrats, You Won!" : "Sorry, You lost."}</p>
           <button className="reset-game">Start Over</button>
         </div>
       </div>
