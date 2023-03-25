@@ -1,6 +1,7 @@
 .boxes {
   display: flex;
 }
+/* visible division/borders on the progressbar */
 .box {
   height: 40px;
   border-right: 1px solid #c7c7c7;
@@ -32,12 +33,14 @@
   animation: 0.45s showError;
 }
 
+/*progress bar outer-most border */
 .progress {
   border: 1px solid #c7c7c7;
   border-right: none;
   position: relative;
 }
 
+/* initial base for progress bar fill-color */
 .progress-inner {
   position: absolute;
   top: 0;

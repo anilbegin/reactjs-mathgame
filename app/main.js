@@ -76,7 +76,7 @@ function Main() {
             You need {10 - score} more points and are allowed to make {2 - mistakes} more mistakes
           </p>
         </div>
-        <ProgressBar />
+        <ProgressBar score={score} />
       </div>
       <div className={"overlay" + (score == 10 || mistakes == 3 ? " overlay--visible" : "")}>
         <div className="overlay-inner">
@@ -90,7 +90,7 @@ function Main() {
   )
 }
 
-function ProgressBar() {
+function ProgressBar(props) {
   return (
     <div className="progress">
       <div className="boxes">
@@ -105,7 +105,7 @@ function ProgressBar() {
         <div className="box"></div>
         <div className="box"></div>
       </div>
-      <div className="progress-inner"></div>
+      <div className="progress-inner" style={{ transform: `scaleX(${props.score / 10})` }}></div>
     </div>
   )
 }
