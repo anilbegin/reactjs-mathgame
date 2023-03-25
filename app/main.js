@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useRef, useEffect } from "react"
 import ReactDOM from "react-dom/client"
 
 function Main() {
@@ -6,6 +6,13 @@ function Main() {
   const [mistakes, setMistakes] = useState(0)
   const [currentProblem, setCurrentProblem] = useState(generateProblem())
   const [userAnswer, setUserAnswer] = useState("")
+  const resetButton = useRef(null)
+
+  useEffect(() => {
+    if (score == 10 || mistakes == 3) {
+      setTimeout(() => resetButton.current.focus(), 310)
+    }
+  }, [score, mistakes])
 
   function generateNumber(max) {
     return Math.floor(Math.random() * (max + 1))
@@ -36,6 +43,13 @@ function Main() {
     }
   }
 
+  function resetGame() {
+    setUserAnswer("")
+    setScore(0)
+    setMistakes(0)
+    setCurrentProblem(generateProblem())
+  }
+
   return (
     <>
       <div className={"main-ui" + (score == 10 || mistakes == 3 ? " overlay-for-blur" : "")}>
@@ -56,7 +70,9 @@ function Main() {
       <div className={"overlay" + (score == 10 || mistakes == 3 ? " overlay--visible" : "")}>
         <div className="overlay-inner">
           <p className="end-message">{score == 10 ? "Congrats, You Won!" : "Sorry, You lost."}</p>
-          <button className="reset-game">Start Over</button>
+          <button onClick={resetGame} ref={resetButton} className="reset-game">
+            Start Over
+          </button>
         </div>
       </div>
     </>
