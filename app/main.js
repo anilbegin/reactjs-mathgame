@@ -4,40 +4,46 @@ import ReactDOM from "react-dom/client"
 function Main() {
   return (
     <>
-      <div class="main-ui">
-        <div class="main-section">
-          <p class="problem"></p>
-          <form action="" class="our-form">
-            <input type="text" class="our-field" autocomplete="off" autofocus />
+      <div className="main-ui">
+        <div className="main-section">
+          <p className="problem"></p>
+          <form action="" className="our-form">
+            <input type="text" className="our-field" autoComplete="off" autoFocus />
             <button>Submit</button>
           </form>
           <p>
-            You need <span class="points-needed">10</span> more points and are allowed to make <span class="mistakes-allowed">2</span> more mistakes
+            You need <span className="points-needed">10</span> more points and are allowed to make <span className="mistakes-allowed">2</span> more mistakes
           </p>
         </div>
-        <div class="progress">
-          <div class="boxes">
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-          </div>
-          <div class="progress-inner"></div>
-        </div>
+        <ProgressBar />
       </div>
-      <div class="overlay">
-        <div class="overlay-inner">
-          <p class="end-message"></p>
-          <button class="reset-game">Start Over</button>
+      <div className="overlay">
+        <div className="overlay-inner">
+          <p className="end-message"></p>
+          <button className="reset-game">Start Over</button>
         </div>
       </div>
     </>
+  )
+}
+
+function ProgressBar() {
+  return (
+    <div className="progress">
+      <div className="boxes">
+        <div className="box"></div>
+        <div className="box"></div>
+        <div className="box"></div>
+        <div className="box"></div>
+        <div className="box"></div>
+        <div className="box"></div>
+        <div className="box"></div>
+        <div className="box"></div>
+        <div className="box"></div>
+        <div className="box"></div>
+      </div>
+      <div className="progress-inner"></div>
+    </div>
   )
 }
 
