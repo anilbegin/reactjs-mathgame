@@ -27,6 +27,7 @@
   }
 }
 
+/* Math Problem Zooms-in with red font for every mistake */
 .on-error {
   animation: 0.45s showError;
 }

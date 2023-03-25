@@ -6,8 +6,11 @@ function Main() {
   const [mistakes, setMistakes] = useState(0)
   const [currentProblem, setCurrentProblem] = useState(generateProblem())
   const [userAnswer, setUserAnswer] = useState("")
+  const [showError, setShowError] = useState(false)
   const resetButton = useRef(null)
+  const inputField = useRef(null)
 
+  // Bring focus on to the "Start Over" button when the game session(Win/Lose) ends
   useEffect(() => {
     if (score == 10 || mistakes == 3) {
       setTimeout(() => resetButton.current.focus(), 310)
@@ -29,6 +32,8 @@ function Main() {
   function handleSubmit(e) {
     e.preventDefault()
 
+    inputField.current.focus() // get the focus back to the input-Field after user clicks on the submit button
+
     let correctAnswer
     if (currentProblem.operator == "+") correctAnswer = currentProblem.numberOne + currentProblem.numberTwo
     if (currentProblem.operator == "-") correctAnswer = currentProblem.numberOne - currentProblem.numberTwo
@@ -40,6 +45,11 @@ function Main() {
       setScore(prev => prev + 1)
     } else {
       setMistakes(prev => prev + 1)
+
+      setShowError(true)
+      setTimeout(() => {
+        setShowError(false)
+      }, 455)
     }
   }
 
@@ -48,17 +58,18 @@ function Main() {
     setScore(0)
     setMistakes(0)
     setCurrentProblem(generateProblem())
+    inputField.current.focus()
   }
 
   return (
     <>
       <div className={"main-ui" + (score == 10 || mistakes == 3 ? " overlay-for-blur" : "")}>
         <div className="main-section">
-          <p className="problem">
+          <p className={"problem" + (showError ? " on-error" : "")}>
             {currentProblem.numberOne} {currentProblem.operator} {currentProblem.numberTwo}
           </p>
           <form onSubmit={handleSubmit} action="" className="our-form">
-            <input value={userAnswer} onChange={e => setUserAnswer(e.target.value)} type="text" className="our-field" autoComplete="off" autoFocus />
+            <input ref={inputField} value={userAnswer} onChange={e => setUserAnswer(e.target.value)} type="text" className="our-field" autoComplete="off" autoFocus />
             <button>Submit</button>
           </form>
           <p>
