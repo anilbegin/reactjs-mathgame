@@ -1,4 +1,5 @@
 // this webpack config file is used after development version is complete
+// *** '/dist' renamed to '/docs' to be able to run the subfolder through Github Pages
 const currentTask = process.env.npm_lifecycle_event
 const path = require("path")
 //const Dotenv = require("dotenv-webpack")  // for .env
@@ -15,7 +16,7 @@ const fse = require("fs-extra")
 class RunAfterCompile {
   apply(compiler) {
     compiler.hooks.done.tap("Copy files", function () {
-      fse.copySync("./app/styles.css", "./dist/styles.css")
+      fse.copySync("./app/styles.css", "./docs/styles.css")
 
       /*
         In case you needed to copy another file or folder
@@ -84,7 +85,8 @@ if (currentTask == "webpackBuild") {
   config.mode = "production"
   config.output = {
     publicPath: "/",
-    path: path.resolve(__dirname, "dist"),
+    //  path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "docs"),
     filename: "[name].[chunkhash].js",
     chunkFilename: "[name].[chunkhash].js"
   }
