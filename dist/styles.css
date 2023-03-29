@@ -1,0 +1,100 @@
+.boxes {
+  display: flex;
+}
+/* visible division/borders on the progressbar */
+.box {
+  height: 40px;
+  border-right: 1px solid #c7c7c7;
+  flex: 1;
+  width: 20px;
+}
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.problem {
+  margin: 0;
+  font-size: 5rem;
+  padding: 10px;
+}
+
+@keyframes showError {
+  50% {
+    color: red;
+    transform: scale(1.3);
+  }
+}
+
+/* Math Problem Zooms-in with red font for every mistake */
+.on-error {
+  animation: 0.45s showError;
+}
+
+/*progress bar outer-most border */
+.progress {
+  border: 1px solid #c7c7c7;
+  border-right: none;
+  position: relative;
+}
+
+/* initial base for progress bar fill-color */
+.progress-inner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #7ecc00;
+  opacity: 0.57;
+  transform: scaleX(0);
+  transform-origin: center left;
+  transition: transform 0.3s ease-out;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.81);
+  display: flex;
+  justify-content: center; /*horizontal align*/
+  align-items: center; /*vertical align*/
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.2);
+  transition: all 0.3s ease-out;
+}
+
+.overlay--visible {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.overlay-for-blur {
+  filter: blur(4px);
+}
+
+.end-message {
+  font-size: 2.02rem;
+}
+.reset-game {
+  background-color: rgb(29, 29, 151);
+  border-radius: 6px;
+  padding: 10px;
+  color: aliceblue;
+  font-size: 1.09rem;
+}
+
+.reset-game:hover {
+  cursor: pointer;
+  background-color: rgb(23, 23, 187);
+}
+
+.overlay-inner {
+  text-align: center;
+}
