@@ -73,4 +73,4 @@ Use the below commands in the VsCode cmd-line with your cloned repo as your targ
 
 `Webpack was modified to generate /docs folder, but Github Pages failed to publish the site from the same.`<br>
 
-`Hence a _third party host_ named _Netlify_ was used to successfully host the site on the web.`
+`Hence a third party host named Netlify was used to successfully host the site on the web.`
