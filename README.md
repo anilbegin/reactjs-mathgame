@@ -1,5 +1,7 @@
 ## About Project:
 
+![alt text](https://github.com/anilbegin/reactjs-mathgame/tree/branch3/images/react-mathgame-page?raw=true)
+
 The Math game was _initially made in basic Javascript_.
 
 This repo _demonstrates the same Math game_, but _made using ReactJs library_ instead.
