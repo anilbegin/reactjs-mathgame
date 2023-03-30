@@ -2,9 +2,9 @@
 
 <a href="https://mathgame-reactjs.netlify.app/" target="_blank"><img src="./images/react-mathgame-page.jpg" width="1091" height="632" alt="React Mathgame homepage" ></a>
 
-This game generates a random math problem, and the user has to answer it correctly. /
-User has to correctly answer 10 randomly generated Math problems to win. /
-The user is allowed to make only 3 mistakes, after which the Game is reset. /
+This game generates a random math problem, and the user has to answer it correctly. \
+User has to correctly answer 10 randomly generated Math problems to win. \
+The user is allowed to make only 3 mistakes, after which the Game is reset. \
 
 The Math game was _initially made in basic Javascript_.
 
