@@ -8,6 +8,14 @@ This repo _demonstrates the same Math game_, but _made using ReactJs library_ in
 
 **VsCode** is used as the **source-code editor**.
 
+## repo summary:
+
+| branch name | description                                                         |
+| ----------- | ------------------------------------------------------------------- |
+| master      | Initial version of the code.                                        |
+| branch2     | Here we further adapt the code to meet the JSX syntax requirements. |
+| branch3     | contains the 'Final version' of the code.                           |
+
 ### Running the project on Local PC:
 
 Clone the repo into your local PC, use VsCode(prefered editor).
@@ -19,14 +27,6 @@ Use the below commands in the VsCode cmd-line with your cloned repo as your targ
 | npm run dev                 | `trigers the webpack to transpile the JSX to generate a bundled file to be run on a Browser on the local PC.`<br> `In the browser, you can access the site with, localhost:3000` <br> `this command is applicable for source code of all 3 branches ` |
 | npm run webpackBuild        | `will generate 'dist' folder, i.e production bundled version.` <br> `applicable for source code of only branch2 and branch3 `                                                                                                                         |
 | npm run previewDist         | ` triggers a node command which generates a server made in express.`<br>`You can access this production bundle via this server on, localhost:4000 ` <br> `applicable for only branch3 `                                                               |
-
-## repo summary:
-
-| branch name | description                                                         |
-| ----------- | ------------------------------------------------------------------- |
-| master      | Initial version of the code.                                        |
-| branch2     | Here we further adapt the code to meet the JSX syntax requirements. |
-| branch3     | contains the 'Final version' of the code.                           |
 
 ## Decription about each branch
 
