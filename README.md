@@ -67,9 +67,10 @@ Use the below commands in the VsCode cmd-line with your cloned repo as your targ
 - Typing npm run previewDist triggers a node command which generates a server made in express.
   You can access this production bundle via this server on, http://localhost:4000
 
-> Initially /dist folder contained the bundled file generated for outputing the production version
-> of the website.
-> Github Pages only allows 'root' or '/docs' as the source for generating web pages.
-> Webpack was modified to generate /docs folder, but Github Pages failed to publish
-> the site from the same.
-> Hence a third party host named Netlify was used to successfully host the site on the web.
+> Initially **/dist** folder contained the bundled file generated for outputing the production version of the website.<br>
+
+> Github Pages only allows **'root'** or **'/docs'** as the source for generating web pages.<br>
+
+> Webpack was modified to generate **/docs** folder, but Github Pages failed to publish the site from the same. <br>
+
+> Hence a _third party host_ named **_Netlify_** was used to successfully host the site on the web.
