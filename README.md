@@ -1,6 +1,6 @@
 ## About Project:
 
-![React Mathgame Homepage](https://user-images.githubusercontent.com/98578895/228818265-158a66eb-7ad6-4424-a1df-4ad6e82f0787.jpg)
+<img src="./images/react-mathgame-page.jpg" width="1091" height="732" alt="React Mathgame homepage" >
 
 The Math game was _initially made in basic Javascript_.
 
