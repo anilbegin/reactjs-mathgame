@@ -4,7 +4,7 @@
 
 This game generates a random math problem, and the user has to answer it correctly. \
 User has to correctly answer 10 randomly generated Math problems to win. \
-The user is allowed to make only 3 mistakes, after which the Game is reset. \
+The user is allowed to make only 3 mistakes, after which the Game is reset.
 
 The Math game was _initially made in basic Javascript_.
 
