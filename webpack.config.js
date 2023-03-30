@@ -1,4 +1,5 @@
-// this webpack config file is used after development version is complete
+// this webpack config file is used after 'development version' is complete
+// this webpack file is moded to develop the 'production version' of the site
 // *** '/dist' renamed to '/docs' to be able to run the subfolder through Github Pages
 // publishing website using Github Pages Failed !!
 // Sucessfully published using Netlify.
