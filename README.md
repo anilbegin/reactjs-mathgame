@@ -1,6 +1,6 @@
 ## About Project:
 
-<img src="./images/react-mathgame-page.jpg" width="1091" height="632" alt="React Mathgame homepage" >
+<a href="https://mathgame-reactjs.netlify.app/"><img src="./images/react-mathgame-page.jpg" width="1091" height="632" alt="React Mathgame homepage" ></a>
 
 The Math game was _initially made in basic Javascript_.
 
