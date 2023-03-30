@@ -20,6 +20,9 @@ This repo _demonstrates the same Math game_, but _made using ReactJs library_ in
 
 Clone the repo into your local PC, use VsCode(prefered editor).
 
+- Read the **command line** and its **description** carefully before running the code on your Local PC
+- If you are cloning branch2 or branch3 **delete** the existing /docs and /dist directory (they get auto created on running the 'npm run webpackBuild' command).
+
 Use the below commands in the VsCode cmd-line with your cloned repo as your target directory.
 
 | command line <br>(local PC) | description                                                                                                                                                                                                                                           |
