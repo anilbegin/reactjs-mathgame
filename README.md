@@ -16,9 +16,9 @@ Use the below commands in the VsCode cmd-line with your cloned repo as your targ
 
 | command line <br>(local PC) | description                                                                                                                                                                                                                                           |
 | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| npm run dev                 | `trigers the webpack to transpile the JSX to generate a bundled file to be run on a Browser on the local PC.`<br> `In the browser, you can access the site with, localhost:3000` <br> `this command is applicable for srouce code of all 3 branches ` |
-| npm run webpackBuild        | `will generate 'dist' folder, i.e production bundled version.` <br> `this command is applicable for only branch2 and branch3 `                                                                                                                        |
-| npm run previewDist         | ` triggers a node command which generates a server made in express.<br>``You can access this production bundle via this server on, localhost:4000 ` <br> `this command is applicable for only branch3 `                                               |
+| npm run dev                 | `trigers the webpack to transpile the JSX to generate a bundled file to be run on a Browser on the local PC.`<br> `In the browser, you can access the site with, localhost:3000` <br> `this command is applicable for source code of all 3 branches ` |
+| npm run webpackBuild        | `will generate 'dist' folder, i.e production bundled version.` <br> `applicable for source code of only branch2 and branch3 `                                                                                                                         |
+| npm run previewDist         | ` triggers a node command which generates a server made in express.<br>``You can access this production bundle via this server on, localhost:4000 ` <br> `applicable for only branch3 `                                                               |
 
 ## repo summary:
 
