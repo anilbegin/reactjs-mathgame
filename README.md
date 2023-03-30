@@ -47,25 +47,29 @@ Use the below commands in the VsCode cmd-line with your cloned repo as your targ
   Only the basic React packages (React, ReactDOM) are imported, so as to check
   if the basic code gives the desired output in the Browser.
 
-| branch2 | | Here we further adapt the code to meet the JSX syntax requirements.<br>
-React code is written for the Math Game.<br>
-React methods namely useState, useRef and useEffect are used as required for the program. |
+### branch2
 
-| branch3 | - | contains the 'Final version' of the code.<br>
-webpack is modified to develop and run the production version of the project.<br>
-older webpack is renamed as webpack-starter.config.js (maintained for future reference)<br>
-current webpack config file is webpack.config.js<br>
-custom script written in package.json ("webpackBuild": "webpack") which transpiles React Code
-for production version of the site.<br>
-typing npm run webpackBuild will generate 'dist' folder, i.e production bundled version.<br>
-custom script written in package.json ("previewDist": "node previewDist",) to preview the
-production bundled version on local PC.<br>
-Typing npm run previewDist triggers a node command which generates a server made in express.<br>
-You can access this production bundle via this server on, http://localhost:4000 <br>
+- Here we further adapt the code to meet the JSX syntax requirements.
+- React code is written for the Math Game.
+- React methods namely useState, useRef and useEffect are used as required for the program.
+
+### branch3
+
+- contains the 'Final version' of the code.
+  > webpack is modified to develop and run the production version of the project.
+- older webpack is renamed as webpack-starter.config.js (maintained for future reference)
+- current webpack config file is webpack.config.js
+- custom script written in package.json ("webpackBuild": "webpack") which transpiles React Code
+  for production version of the site.
+- typing npm run webpackBuild will generate 'dist' folder, i.e production bundled version.
+- custom script written in package.json ("previewDist": "node previewDist",) to preview the
+  production bundled version on local PC.
+- Typing npm run previewDist triggers a node command which generates a server made in express.
+  You can access this production bundle via this server on, http://localhost:4000
 
 > Initially /dist folder contained the bundled file generated for outputing the production version
 > of the website.
 > Github Pages only allows 'root' or '/docs' as the source for generating web pages.
 > Webpack was modified to generate /docs folder, but Github Pages failed to publish
 > the site from the same.
-> Hence a third party host named Netlify was used to successfully host the site on the web. |
+> Hence a third party host named Netlify was used to successfully host the site on the web.
