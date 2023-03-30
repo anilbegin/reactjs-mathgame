@@ -43,7 +43,7 @@ Use the below commands in the VsCode cmd-line with your cloned repo as your targ
 - package.json file automatically maintains a list of all packages installed using npm.
 - _custom script_ is written inside _package.json_ file (**"dev": "webpack serve"**) as a trigger for compiling and running the React code.
 - Typing, **npm run dev** (custom script written)in the command line triggers the webpack to _transpile the JSX_ to generate a bundled file to be run on a Browser on the local PC.
-- In the browser, you can access the site with, http://localhost:3000
+- In the browser, you can access the site with, http://localhost:3000 \
   Only the basic React packages (React, ReactDOM) are imported, so as to check
   if the basic code gives the desired output in the Browser.
 
