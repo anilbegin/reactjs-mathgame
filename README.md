@@ -1,6 +1,6 @@
 ## About Project:
 
-![React Mathgame Homepage](https://github.com/anilbegin/reactjs-mathgame/tree/branch3/images/react-mathgame-page.jpg)
+![React Mathgame Homepage](https://user-images.githubusercontent.com/98578895/228818265-158a66eb-7ad6-4424-a1df-4ad6e82f0787.jpg)
 
 The Math game was _initially made in basic Javascript_.
 
