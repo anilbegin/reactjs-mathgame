@@ -28,7 +28,7 @@ Use the below commands in the VsCode cmd-line with your cloned repo as your targ
 | branch2     | Here we further adapt the code to meet the JSX syntax requirements. |
 | branch3     | contains the 'Final version' of the code.                           |
 
-## Decription about the each branch
+## Decription about each branch
 
 ### master
 
@@ -37,7 +37,7 @@ Use the below commands in the VsCode cmd-line with your cloned repo as your targ
   since it was previously made in basic JS, this showcases only the first
   step to adapt the code to be initially run with React.
 
-      > webpack config file is created for '**development version**'.
+      > webpack config file is created for **development version**.
       > webpack file you want to use has to be named **webpack.config.js**
 
 - package.json file automatically maintains a list of all packages installed using npm.
@@ -59,10 +59,10 @@ Use the below commands in the VsCode cmd-line with your cloned repo as your targ
   > webpack is modified to develop and run the production version of the project.
 - older webpack is renamed as webpack-starter.config.js (maintained for future reference)
 - current webpack config file is webpack.config.js
-- custom script written in package.json ("webpackBuild": "webpack") which transpiles React Code
+- custom script written in package.json (**"webpackBuild": "webpack"**) which transpiles React Code
   for production version of the site.
 - typing npm run webpackBuild will generate 'dist' folder, i.e production bundled version.
-- custom script written in package.json ("previewDist": "node previewDist",) to preview the
+- custom script written in package.json (**"previewDist": "node previewDist"**) to preview the
   production bundled version on local PC.
 - Typing npm run previewDist triggers a node command which generates a server made in express.
   You can access this production bundle via this server on, http://localhost:4000
