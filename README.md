@@ -14,17 +14,11 @@ Clone the repo into your local PC, use VsCode(prefered editor).
 
 Use the below commands in the VsCode cmd-line with your cloned repo as your target directory.
 
-| command line | | description |
-| (local PC) | | | ---- |
-| :------------ | |--------------------:|
-| npm run dev | | trigers the webpack to transpile the JSX to generate a bundled file to be run on a
-Browser on the local PC.<br>
-In the browser, you can access the site with, localhost:3000 |
-
-| npm run webpackBuild | | will generate 'dist' folder, i.e production bundled version. |
-
-| npm run previewDist | | triggers a node command which generates a server made in express.<br>
-You can access this production bundle via this server on, localhost:4000 |
+| command line <br>(local PC) | description                                                                                                                                                                      |
+| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| npm run dev                 | `trigers the webpack to transpile the JSX to generate a bundled file to be run on a Browser on the local PC.`<br> `In the browser, you can access the site with, localhost:3000` |
+| npm run webpackBuild        | `will generate 'dist' folder, i.e production bundled version.`                                                                                                                   |
+| npm run previewDist         | ` triggers a node command which generates a server made in express.<br>``You can access this production bundle via this server on, localhost:4000 `                              |
 
 ## Description about the repo:
 
