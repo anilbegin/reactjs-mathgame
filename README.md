@@ -57,8 +57,8 @@ Use the below commands in the VsCode cmd-line with your cloned repo as your targ
 
 - contains the 'Final version' of the code.
   > webpack is modified to develop and run the production version of the project.
-  > **older webpack** is renamed as ==webpack-starter.config.js== (maintained for future reference) /
-  > **current webpack** config file is ==webpack.config.js== /
+- **older webpack** is renamed as **webpack-starter.config.js** (maintained for future reference)
+- **current webpack** config file is **webpack.config.js**
 - custom script written in package.json (**"webpackBuild": "webpack"**) which transpiles React Code
   for production version of the site.
 - typing npm run webpackBuild will generate 'dist' folder, i.e production bundled version.
@@ -73,4 +73,4 @@ Use the below commands in the VsCode cmd-line with your cloned repo as your targ
 
 `Webpack was modified to generate /docs folder, but Github Pages failed to publish the site from the same.`<br>
 
-`Hence a third party host named Netlify was used to successfully host the site on the web.`
+`Hence a _third party host_ named _Netlify_ was used to successfully host the site on the web.`
