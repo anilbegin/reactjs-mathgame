@@ -20,23 +20,32 @@ Use the below commands in the VsCode cmd-line with your cloned repo as your targ
 | npm run webpackBuild        | `will generate 'dist' folder, i.e production bundled version.`                                                                                                                   |
 | npm run previewDist         | ` triggers a node command which generates a server made in express.<br>``You can access this production bundle via this server on, localhost:4000 `                              |
 
-## Description about the repo:
+## repo summary:
 
-| branch name | | description |
-| :---------- | | ----------: |
-| master | | Initial version of the code.<br>
-This branch contains only the basic skeleton for the Math game,
-since it was previously made in basic JS, this showcases only the first
-step to adapt the code to be initially run with React.<br>
-webpack config file is created for 'development version'.<br>
-package.json automatically maintains a list of all packages installed using npm.<br>
-custom script is written inside package.json ("dev": "webpack serve") as a triger
-for compiling and running the React code.<br>
-Typing, npm run dev (custom script written)in the command line trigers the webpack to
-transpile the JSX to generate a bundled file to be run on a Browseron the local PC.<br>
-In the browser, you can access the site with, http://localhost:3000<br>
-Only the basic React packages (React, ReactDOM) are imported, so as to check
-if the basic code gives the desired output in the Browser. |
+| branch name | description                                                         |
+| ----------- | ------------------------------------------------------------------- |
+| master      | Initial version of the code.                                        |
+| branch2     | Here we further adapt the code to meet the JSX syntax requirements. |
+| branch3     | contains the 'Final version' of the code.                           |
+
+## Decription about the each branch
+
+### master
+
+- Initial version of the code.
+- This branch contains only the basic skeleton for the Math game,
+  since it was previously made in basic JS, this showcases only the first
+  step to adapt the code to be initially run with React.
+
+      > webpack config file is created for '**development version**'.
+      > webpack file you want to use has to be named **webpack.config.js**
+
+- package.json file automatically maintains a list of all packages installed using npm.
+- _custom script_ is written inside _package.json_ file (**"dev": "webpack serve"**) as a trigger for compiling and running the React code.
+- Typing, **npm run dev** (custom script written)in the command line triggers the webpack to _transpile the JSX_ to generate a bundled file to be run on a Browser on the local PC.
+- In the browser, you can access the site with, http://localhost:3000
+  Only the basic React packages (React, ReactDOM) are imported, so as to check
+  if the basic code gives the desired output in the Browser.
 
 | branch2 | | Here we further adapt the code to meet the JSX syntax requirements.<br>
 React code is written for the Math Game.<br>
