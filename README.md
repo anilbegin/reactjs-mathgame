@@ -37,8 +37,8 @@ Use the below commands in the VsCode cmd-line with your cloned repo as your targ
   since it was previously made in basic JS, this showcases only the first
   step to adapt the code to be initially run with React.
 
-      > webpack config file is created for **development version**.
-      > webpack file you want to use has to be named **webpack.config.js**
+      > webpack config file is created for 'development version'.
+      > webpack file you want to use has to be named 'webpack.config.js'
 
 - package.json file automatically maintains a list of all packages installed using npm.
 - _custom script_ is written inside _package.json_ file (**"dev": "webpack serve"**) as a trigger for compiling and running the React code.
