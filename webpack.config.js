@@ -1,5 +1,7 @@
 // this webpack config file is used after development version is complete
 // *** '/dist' renamed to '/docs' to be able to run the subfolder through Github Pages
+// publishing website using Github Pages Failed !!
+// Sucessfully published using Netlify.
 const currentTask = process.env.npm_lifecycle_event
 const path = require("path")
 //const Dotenv = require("dotenv-webpack")  // for .env
