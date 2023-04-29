@@ -4,7 +4,7 @@ The Math game was _initially made in basic Javascript_.
 
 This repo _demonstrates the same Math game_, but _made using ReactJs library_ instead.
 
-+ **branch3** contains the **Final complete version** of the code.
+🟢 	:green_circle: **branch3** contains the **Final complete version** of the code.
 
 **VsCode** is used as the **source-code editor**.
 
