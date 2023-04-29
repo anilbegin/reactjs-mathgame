@@ -1,6 +1,6 @@
 ## About Project:
 
-The Math game was _initially made in basic Javascript_.
+The Math game was _initially made in basic Javascript_ :yellow_circle: refer <a href="https://github.com/anilbegin/js-mathgame" target="_blank"> js-mathgame (repo) </a>.
 
 This repo _demonstrates the same Math game_, but _made using ReactJs library_ instead.
 
